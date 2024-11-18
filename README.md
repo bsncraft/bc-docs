@@ -1,0 +1,2 @@
+# bc-docs
+BusinessCraft Documentation
