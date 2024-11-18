@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'BusinessCraft',
   tagline: 'Designed to develop.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://businesscraft.help',
@@ -70,7 +70,7 @@ const config: Config = {
       title: 'BusinessCraft',
       logo: {
         alt: 'BusinessCraft Help',
-        src: 'img/logo.svg',
+        src: 'img/icon.svg',
       },
       items: [
         {
