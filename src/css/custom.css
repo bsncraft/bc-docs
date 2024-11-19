@@ -55,6 +55,11 @@
   background-size: cover;
 }
 
-.footer__links {
+.footer__links, 
+.footer__bottom {
   position: relative;
+}
+
+.footer__logo {
+  height: 60px;
 }

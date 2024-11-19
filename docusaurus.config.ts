@@ -93,24 +93,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          items: [
-            {
-              html: `<a href="https://www.businesscraft.com.au" target="_blank" rel="noreferrer noopener" aria-label="BusinessCraft Website">
-                  <img src="https://businesscraft.help/img/footer_logo.png" alt="BusinessCraft Logo" width="160" height="40" />
-                </a>`
-            },
-          ]
-        },
-        {
           title: 'Help',
           items: [
             {
               label: 'Docs',
               to: '/docs/category/getting-started',
-            },
-            {
-              label: 'News',
-              to: '/news',
             },
           ],
         },
@@ -121,13 +108,27 @@ const config: Config = {
               label: 'LinkedIn',
               href: 'https://www.linkedin.com/company/businesscraft',
             },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'News',
+              to: '/news',
+            },
             {
               label: 'Support',
               href: 'https://www.businesscraft.com.au/client-portal',
             },
           ],
-        }
+        },
       ],
+      logo: {
+        alt: 'BusinessCraft Logo',
+        src: '/img/footer_logo.png',
+        href: 'https://businesscraft.com.au',
+      },
       copyright: `Copyright © ${new Date().getFullYear()} BusinessCraft Pty Ltd`,
     },
     prism: {
