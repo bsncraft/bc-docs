@@ -24,3 +24,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.homepageWrapper {
+  background-image: url('/static/img/background-2.png');
+  background-position: bottom right;
+}

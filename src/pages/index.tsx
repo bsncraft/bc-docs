@@ -12,7 +12,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h2" className="hero__title">
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -33,7 +33,8 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title} Documentation`}
-      description="Clear and concise user guides for BusinessCraft Software.">
+      description="Clear and concise user guides for BusinessCraft Software."
+      wrapperClassName={clsx(styles.homepageWrapper)}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
