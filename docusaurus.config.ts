@@ -99,10 +99,6 @@ const config: Config = {
                   <img src="https://businesscraft.help/img/footer_logo.png" alt="BusinessCraft Logo" width="160" height="40" />
                 </a>`
             },
-            {
-              label: 'Support',
-              href: 'https://www.businesscraft.com.au/client-portal',
-            },
           ]
         },
         {
@@ -110,7 +106,7 @@ const config: Config = {
           items: [
             {
               label: 'Docs',
-              to: '/docs/getting-started/businesscraft-overview',
+              to: '/docs/category/getting-started',
             },
             {
               label: 'News',
@@ -126,8 +122,8 @@ const config: Config = {
               href: 'https://www.linkedin.com/company/businesscraft',
             },
             {
-              label: 'About Us',
-              href: 'https://www.businesscraft.com.au/about',
+              label: 'Support',
+              href: 'https://www.businesscraft.com.au/client-portal',
             },
           ],
         }
