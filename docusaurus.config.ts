@@ -67,12 +67,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/businesscraft-social-card.jpg',
+    image: 'img/businesscraft-social-card.png',
     navbar: {
       title: 'BusinessCraft',
       logo: {
         alt: 'BusinessCraft Help',
-        src: 'img/icon.svg',
+        src: 'img/logo.svg',
       },
       items: [
         {
