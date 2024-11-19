@@ -8,6 +8,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  margin-bottom: 4rem;
   background-color: #6706ba;
   background-image: url('/static/img/background-1.png');
   --ifm-hero-text-color: var(--ifm-color-secondary);

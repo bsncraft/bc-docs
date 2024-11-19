@@ -53,13 +53,13 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={styles.about__card}>
+      <div className={styles.about__section}>
+        <div className={styles.about__icon}>
+          <Svg className={styles.featureSvg} role="img" />
+        </div>
+        <Heading as="h3" className={styles.about__header}>{title}</Heading>
+        <p className={styles.about__description}>{description}</p>
       </div>
     </div>
   );
@@ -68,14 +68,12 @@ function Feature({ title, Svg, description }: FeatureItem) {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          Your craft, your people, your business
-          <div className='about__cards'>
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
-          </div>
+      <div className={styles.features__container}>
+        <Heading as="h2" className="features__header">Your craft, your people, your business</Heading>
+        <div className={styles.about__cards}>
+          {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
         </div>
       </div>
     </section>
