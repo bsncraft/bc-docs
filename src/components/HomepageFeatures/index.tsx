@@ -1,9 +1,18 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import icons from '@site/src/icons';
+import Link from '@docusaurus/Link';
+
+const {
+  Display,
+  HammerBrush,
+  EarthOceania,  
+} = icons;
 
 type FeatureItem = {
   title: string;
+  link: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
 };
@@ -11,7 +20,8 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Your industry - our passion',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    link: 'https://www.businesscraft.com.au/industries',
+    Svg: Display,
     description: (
       <>
         Working within the construction and manufacturing sectors to
@@ -25,7 +35,8 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Software is the new toolbelt',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    link: 'https://www.businesscraft.com.au/construction',
+    Svg: HammerBrush,
     description: (
       <>
         BusinessCraft's Construction Management solution keeps projects on track
@@ -38,7 +49,8 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'About BusinessCraft',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    link: 'https://www.businesscraft.com.au/about',
+    Svg: EarthOceania,
     description: (
       <>
         Local and proud - we are leading the way in business systems.
@@ -51,9 +63,9 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, link, Svg, description }: FeatureItem) {
   return (
-    <div className={styles.about__card}>
+      <Link to={link} className={styles.about__card}>
       <div className={styles.about__section}>
         <div className={styles.about__icon}>
           <Svg className={styles.featureSvg} role="img" />
@@ -61,7 +73,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
         <Heading as="h3" className={styles.about__header}>{title}</Heading>
         <p className={styles.about__description}>{description}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
