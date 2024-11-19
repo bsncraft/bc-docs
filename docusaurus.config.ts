@@ -68,9 +68,17 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/businesscraft-social-card.png',
+    announcementBar: {
+      id: 'new_era',
+      content: 'BusinessCraft V6.1 Released - The new era',
+      backgroundColor: '#6706ba',
+      textColor: '#fff',
+      isCloseable: true,
+    },
     docs: {
       sidebar: {
         hideable: true,
+        autoCollapseCategories: true,
       },
     },
     navbar: {
@@ -139,6 +147,18 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      appId: 'VH0RTT1HQF',
+      apiKey: 'ebedad73a3ce676ef37ef5df0d64aab9',
+      indexName: 'businesscraft',
+      contextualSearch: true,
+      externalUrlRegex: 'businesscraft\\.help',
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+      searchPagePath: 'search',
     },
   } satisfies Preset.ThemeConfig,
 };

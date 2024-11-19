@@ -35,6 +35,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);  
 }
 
+.close {
+  color: #fff;
+}
+
 .footer--dark {
   --ifm-footer-background-color: #000926;
   position: relative;
@@ -80,7 +84,7 @@
 .table-of-contents__link {
   border-left: calc(3 * var(--ifm-global-border-width)) solid transparent;
   display: inline-block;
-  padding: var(--ifm-toc-padding-vertical) var(--ifm-toc-padding-horizontal);
+  padding: calc(var(--ifm-toc-padding-vertical) / 2) var(--ifm-toc-padding-horizontal);
 
   transition-property: border-color, color;
   transition-duration: var(--ifm-transition-slow);

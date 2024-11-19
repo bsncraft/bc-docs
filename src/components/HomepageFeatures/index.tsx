@@ -10,38 +10,48 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
+    title: 'Your industry - our passion',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Working within the construction and manufacturing sectors to
+        drive innovation through our integrated solutions and deep
+        industry expertise. Unite your people and processes on a single
+        platform. Boost efficiency, enhance communication, and accelerate
+        building—all from one integrated solution. Discover how our
+        leading end to end solutions can help you achieve more.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Software is the new toolbelt',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        BusinessCraft's Construction Management solution keeps projects on track
+        from planning, handover and maintenance. With tools for scheduling,
+        extra orders, billing, checklists, photos and accessing documents,
+        it connects teams at every stage. Real-time updates and visibility,
+        helping you deliver successful projects on time.
+      </>
+    ),
+  },
+  {
+    title: 'About BusinessCraft',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Local and proud - we are leading the way in business systems.
+        With over 30 years of experience, we are committed to being the
+        go-to choice for businesses across residential construction and
+        diverse industries. Our innovative, integrated solutions and deep
+        industry expertise drive better outcomes for your business.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -60,9 +70,12 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+          Your craft, your people, your business
+          <div className='about__cards'>
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
