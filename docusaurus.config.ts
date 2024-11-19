@@ -68,6 +68,11 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/businesscraft-social-card.png',
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: 'BusinessCraft',
       logo: {
