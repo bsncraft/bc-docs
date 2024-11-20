@@ -1,23 +1,21 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+gregb:
+  name: Greg Barrass
+  title: Professional Services Consultant
+  url: https://businesscraft.help
+  image_url: /img/gregb.jpeg
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    github: bc-gregb
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+johnc:
+  name: John Cottrell
+  title: Technical Lead
+  url: https://github.com/johncbc
+  image_url: https://avatars.githubusercontent.com/u/14799453?v=4
   page:
     # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+    permalink: '/all-johnc-articles'
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: johnccodes
+    linkedin: john-co-com
+    github: johncbc
