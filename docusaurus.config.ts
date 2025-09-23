@@ -1,26 +1,22 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'BusinessCraft',
-  tagline: 'Designed to develop.',
-  favicon: 'img/favicon.png',
+  title: 'BusinessCraft Database Schema',
+  tagline: 'Database structure documentation for BuiltGrid integration project',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://businesscraft.help',
+  url: 'https://builtgrid.businesscraft.com',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'bsncraft', // Usually your GitHub org/user name.
-  projectName: 'bc-docs', // Usually your repo name.
+  organizationName: 'businesscraft',
+  projectName: 'builtgrid-docs',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -37,28 +33,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: '/',
         },
-        blog: {
-          path: 'news',
-          routeBasePath: 'news',
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -67,38 +44,20 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Replace with your project's social card
     image: 'img/businesscraft-social-card.png',
-    announcementBar: {
-      id: 'new_era',
-      content: 'BusinessCraft V6.1 Released - The new era',
-      backgroundColor: '#6706ba',
-      textColor: '#fff',
-      isCloseable: true,
-    },
-    docs: {
-      sidebar: {
-        hideable: true,
-        autoCollapseCategories: true,
-      },
-    },
     navbar: {
-      title: 'BusinessCraft',
+      title: 'BusinessCraft Database Schema',
       logo: {
-        alt: 'BusinessCraft Help',
+        alt: 'BusinessCraft Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'helpSidebar',
+          sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
-        },
-        { to: '/news', label: 'News', position: 'left' },
-        {
-          href: 'https://www.businesscraft.com.au/client-portal',
-          label: 'Support',
-          position: 'right',
+          label: 'Documentation',
         },
       ],
     },
@@ -106,61 +65,53 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Help',
+          title: 'Database Schema',
           items: [
             {
-              label: 'Docs',
-              to: '/docs/category/getting-started',
+              label: 'Overview',
+              to: '/database-schema/overview',
+            },
+            {
+              label: 'Contracts',
+              to: '/database-schema/contracts',
+            },
+            {
+              label: 'Job Costing',
+              to: '/database-schema/job-costing',
+            },
+            {
+              label: 'Inventory',
+              to: '/database-schema/inventory',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'More Tables',
           items: [
             {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/company/businesscraft',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'News',
-              to: '/news',
+              label: 'Purchase Orders',
+              to: '/database-schema/purchase-orders',
             },
             {
-              label: 'Support',
-              href: 'https://www.businesscraft.com.au/client-portal',
+              label: 'Vendors',
+              to: '/database-schema/vendors',
+            },
+            {
+              label: 'Lookup Tables',
+              to: '/database-schema/lookup-tables',
             },
           ],
         },
       ],
-      logo: {
-        alt: 'BusinessCraft Logo',
-        src: '/img/footer_logo.png',
-        href: 'https://businesscraft.com.au',
-      },
-      copyright: `Copyright © ${new Date().getFullYear()} BusinessCraft Pty Ltd`,
+      copyright: `Copyright © ${new Date().getFullYear()} BusinessCraft Database Schema Documentation.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
-    algolia: {
-      appId: 'VH0RTT1HQF',
-      apiKey: 'ebedad73a3ce676ef37ef5df0d64aab9',
-      indexName: 'businesscraft',
-      contextualSearch: true,
-      externalUrlRegex: 'businesscraft\\.help',
-      replaceSearchResultPathname: {
-        from: '/docs/', // or as RegExp: /\/docs\//
-        to: '/',
-      },
-      searchPagePath: 'search',
+      additionalLanguages: ['sql', 'json', 'yaml'],
     },
   } satisfies Preset.ThemeConfig,
 };
 
+export default config;
 export default config;
