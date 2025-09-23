@@ -251,7 +251,7 @@ Contract event tracking for milestone management.
 | `CLE_CRE_TIME` | D9 | 9 | Transaction Audit Time |
 | `CLE_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
 
-## Contract Lines - Progress Billing (CONLINP)
+## Contract Lines - Progress Billing (CONLINF)
 
 Progress billing stages and completion tracking.
 

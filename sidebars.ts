@@ -6,6 +6,7 @@ const sidebars: SidebarsConfig = {
     'database-schema/contracts',
     'database-schema/job-costing',
     'database-schema/inventory',
+    'database-schema/customers',
     'database-schema/purchase-orders',
     'database-schema/vendors',
     'database-schema/lookup-tables',

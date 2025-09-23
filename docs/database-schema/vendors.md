@@ -1,6 +1,6 @@
 # Vendor Management Tables
 
-## Vendor Master (VENMAS)
+## Vendor Master (VENMASA)
 
 | Field | Type | Size | Description |
 |-------|------|------|-------------|
@@ -195,3 +195,65 @@
 | `VLI_COST` | D10 | 10 | Standard Cost |
 | `VLI_UOM` | A2 | 2 | Unit of Measure |
 | `VLI_ACTIVE` | A1 | 1 | Active Flag |
+
+## Contact Addresses (CNTFILB)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `CNTB_TYPE` | A1 | 1 | Type (B = Contact Addresses) |
+| `CNTB_ADDRESS` | D9 | 9 | Address No |
+| `CNTB_KEY` | A10 | 10 | Key |
+| `CNTB_SUBURB` | A30 | 30 | Suburb |
+| `CNTB_ADDR1` | A30 | 30 | Address 1 |
+| `CNTB_ADDR2` | A30 | 30 | Address 2 |
+| `CNTB_STATE` | A3 | 3 | State |
+| `CNTB_POSTCODE` | A8 | 8 | PostCode |
+
+## Contact Categories (CNTFILC)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `CNTC_TYPE` | A1 | 1 | Type (C = Contact Categories) |
+| `CNTC_CONTYP` | A1 | 1 | Contact Type (A=Other, B=Customer, C=Vendors etc) |
+| `CNTC_CODE` | A3 | 3 | Category Code |
+| `CNTC_FILLER` | A5 | 5 | Filler |
+| `CNTC_SCRKEY` | A9 | 9 | Screen Key |
+| `CNTC_KEY` | A10 | 10 | Key |
+| `CNTC_DESC` | A30 | 30 | Category Description |
+
+## Contact Cross Reference (CNTXRFA)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `CXRF_TYPE` | A1 | 1 | Type (A=Other, B=Vendors etc) |
+| `CXRF_SRC_CODE` | A24 | 24 | Source Key |
+| `CXRF_SEQ` | D5 | 5 | Sequence |
+| `CXRF_TYPCONST` | A25 | 25 | Typeconst |
+| `CXRF_SCRKEY` | A29 | 29 | Const + Seq |
+| `CXRF_KEY` | A30 | 30 | Key |
+| `CXRF_CAT` | A3 | 3 | Contact Category |
+| `CXRF_CONTACT` | D9 | 9 | Contact Number |
+| `CXRF_CONTACTA` | A9 | 9 | Contact Number Alpha |
+| `CXRF_POSITION` | A30 | 30 | Position |
+| `CXRF_ACTIVE` | A1 | 1 | Active Flag |
+
+## Email Addresses (EMLADDA)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `EMLA_TYPE` | A1 | 1 | Line Type (A) |
+| `EMLA_REFCODE` | A25 | 25 | Reference Code |
+| `EMLA_SEQ` | D3 | 3 | Sequence Number |
+| `EMLA_CNTREF` | A9 | 9 | Contact Reference |
+| `EMLA_SCRKEY` | A28 | 28 | Module/Ref Code/Seq No |
+| `EMLA_CONST` | A25 | 25 | Module/Reference Code |
+| `EMLA_KEY` | A35 | 35 | Type/Module/Ref Code/Seq No |
+| `EMLA_ADDRESS` | A300 | 300 | Email/Web Address |
+| `EMLA_MOD_USER` | A12 | 12 | Transaction Audit Initials |
+| `EMLA_MOD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `EMLA_MOD_TIME` | D9 | 9 | Transaction Audit Time |
+| `EMLA_MOD_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `EMLA_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `EMLA_CRE_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `EMLA_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `EMLA_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |

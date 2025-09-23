@@ -43,9 +43,17 @@ const config: Config = {
     ],
   ],
 
+  themes: ['@docusaurus/theme-mermaid'],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/businesscraft-social-card.png',
+    // Configure scroll behavior for anchor links
+    scrollToTop: true,
+    scrollToTopOptions: {
+      threshold: 100,
+      alwaysShowAfterScrollToTop: true,
+    },
     navbar: {
       title: 'BusinessCraft Database Schema',
       logo: {
@@ -64,27 +72,31 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Database Schema',
-          items: [
-            {
-              label: 'Overview',
-              to: '/database-schema/overview',
-            },
-            {
-              label: 'Contracts',
-              to: '/database-schema/contracts',
-            },
-            {
-              label: 'Job Costing',
-              to: '/database-schema/job-costing',
-            },
-            {
-              label: 'Inventory',
-              to: '/database-schema/inventory',
-            },
-          ],
-        },
+                {
+                  title: 'Database Schema',
+                  items: [
+                    {
+                      label: 'Overview',
+                      to: '/database-schema/overview',
+                    },
+                    {
+                      label: 'Contracts',
+                      to: '/database-schema/contracts',
+                    },
+                    {
+                      label: 'Job Costing',
+                      to: '/database-schema/job-costing',
+                    },
+                    {
+                      label: 'Inventory',
+                      to: '/database-schema/inventory',
+                    },
+                    {
+                      label: 'Customers',
+                      to: '/database-schema/customers',
+                    },
+                  ],
+                },
         {
           title: 'More Tables',
           items: [
@@ -113,5 +125,4 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 };
 
-export default config;
 export default config;

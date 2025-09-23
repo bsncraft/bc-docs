@@ -385,3 +385,126 @@
 | `COT_M_CRE_DATE` | D7 | 7 | Transaction Audit Date |
 | `COT_M_CRE_TIME` | D9 | 9 | Transaction Audit Time |
 | `COT_M_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
+
+## Contacts Multi Addresses (IVCTBLU)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `IVTU_TYPE` | A1 | 1 | Record Type (U = Multiple Addresses) |
+| `IVTU_CUSTNO` | A6 | 6 | Customer No |
+| `IVTU_SEQNUM` | D3 | 3 | Sequence Number |
+| `IVTU_SEQNUMA` | A3 | 3 | Alpha Sequence Number |
+| `IVTU_SCRKEY` | A9 | 9 | Customer No/Sequence |
+| `IVTU_TYPECONST` | A7 | 7 | Type/Customer |
+| `IVTU_KEY` | A10 | 10 | Primary Key (Type/Customer/Sequence) |
+| `IVTU_TITLE` | A6 | 6 | Title of Person |
+| `IVTU_SURNAME` | A30 | 30 | Surname of Person |
+| `IVTU_FIRSTNAME` | A20 | 20 | First Name of Person |
+| `IVTU_ADDRESS` | A30 | 30 | Work Address |
+| `IVTU_ADDRESS2` | A30 | 30 | Work Address Line 2 |
+| `IVTU_ADDRESS3` | A30 | 30 | Work Address Line 3 |
+| `IVTU_ADDRESS4` | A30 | 30 | Work Address Line 4 |
+| `IVTU_SUBURB` | A20 | 20 | Work Suburb |
+| `IVTU_STATE` | A3 | 3 | Work State |
+| `IVTU_ZIP` | A8 | 8 | Work Post Code |
+| `IVTU_PHWORK` | A20 | 20 | Work Phone |
+| `IVTU_PHHOME` | A20 | 20 | Home Phone |
+| `IVTU_MOBILE` | A20 | 20 | Mobile Phone |
+| `IVTU_FAX` | A20 | 20 | Fax Number |
+| `IVTU_INITIALS` | A3 | 3 | Contact Initials |
+| `IVTU_DELCODE` | D3 | 3 | Delivery Address Code |
+| `IVTU_POSITION` | A30 | 30 | Position |
+| `IVTU_CONTACTTYPE` | A3 | 3 | Contact Type |
+| `IVTU_COUNTRY` | A2 | 2 | Country Code |
+| `IVTU_PLANTID` | A6 | 6 | Plant Code |
+| `IVTU_LATITUDE` | D10 | 10 | Latitude |
+| `IVTU_LONGITUDE` | D10 | 10 | Longitude |
+| `IVTU_MOD_USER` | A12 | 12 | Transaction Audit Initials |
+| `IVTU_MOD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `IVTU_MOD_TIME` | D9 | 9 | Transaction Audit Time |
+| `IVTU_MOD_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `IVTU_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `IVTU_CRE_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `IVTU_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `IVTU_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
+## Word Processing Document Types (IVCTBLP)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `IVWP_TYPE` | A1 | 1 | Table Type (P = Word Proc Document Types) |
+| `IVWP_MODULE` | A2 | 2 | Module/Package that Document Belongs to |
+| `IVWP_SUBAREA` | A2 | 2 | SubArea within Module |
+| `IVWP_CODE` | A5 | 5 | Document Type Code |
+| `IVWP_SCRKEY` | A9 | 9 | Primary Key (Type+Module+SubArea+Code) |
+| `IVWP_MODSUB` | A6 | 6 | Module+SubArea |
+| `IVWP_KEY` | A10 | 10 | Primary Key (Type+Module+SubArea+Code) |
+| `IVWP_DESCR` | A30 | 30 | Description |
+| `IVWP_PATH` | A30 | 30 | Directory Path to Store Docs |
+| `IVWP_FILE` | A30 | 30 | File Name for Master/Template |
+| `IVWP_EDTCMD` | A30 | 30 | Editing Command |
+| `IVWP_EDTPAR` | A30 | 30 | Editing Parameters Passed to Edit Command |
+| `IVWP_MERGEFMT` | A1 | 1 | Mail Merge Format |
+| `IVWP_EXT` | A3 | 3 | Extension |
+| `IVWP_NOCHNG` | A1 | 1 | No Changes Allowed After Initial Creation |
+| `IVWP_MERGE_NOTES` | A1 | 1 | Y= Merge Document Register Notes |
+| `IVWP_ACTIVE` | A1 | 1 | Y= Active |
+| `IVWP_CATG` | A5 | 5 | Document Register Category |
+| `IVWP_FILE2` | A30 | 30 | File Name for Master/Template Continued |
+| `IVWP_OFFLINE` | A1 | 1 | Y= Available Offline |
+| `IVWP_MSGREF` | A10 | 10 | Default Message REF |
+| `IVWP_MSGTEMPLATE` | A6 | 6 | Default Message Template |
+| `IVWP_DESC_OPT` | A1 | 1 | Description Load Option F=Filename |
+| `IVWP_INC_SLSEST` | A1 | 1 | Output Sales Estimate |
+| `IVWP_INC_JOBINFO` | A1 | 1 | Output Job Info Lines |
+| `IVWP_ARC_DOCS` | A1 | 1 | Y = Allow Document Archive |
+| `IVWP_ARC_PATH` | A30 | 30 | Custom Document Archive Path |
+| `IVWP_LIB_DOCTYP` | A5 | 5 | Default Doc Type for Library |
+| `IVWP_COMP_QUAL` | D3 | 3 | Compression Quality Between 0-100 |
+| `IVWP_COMP_WDTH` | D4 | 4 | Compression Image Width |
+| `IVWP_COMP_HGTH` | D4 | 4 | Compression Image Height |
+| `IVWP_COMP_RSZE` | D1 | 1 | Compression Image Resize Mode |
+| `IVWP_RATING` | A1 | 1 | Default Importance Rating |
+| `IVWP_PRIVACY` | A2 | 2 | Default Privacy Flag |
+| `IVWP_MOD_USER` | A12 | 12 | Transaction Audit Initials |
+| `IVWP_MOD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `IVWP_MOD_TIME` | D9 | 9 | Transaction Audit Time |
+| `IVWP_MOD_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `IVWP_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `IVWP_CRE_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `IVWP_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `IVWP_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
+## Cost Centre Table (JOBTBLA)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `CC_TYPE` | A1 | 1 | Table Type (A = Cost Centre Description) |
+| `CC_CODE` | A3 | 3 | Cost Centre Code |
+| `CC_KEY` | A7 | 7 | Type/Cost Centre Code (Primary Key) |
+| `CC_DESC` | A40 | 40 | Cost Centre Description |
+| `CC_PR_HOUR_TYPE` | A2 | 2 | Default Hour Type for Pay |
+| `CC_PO_INTCMP_TFR` | A1 | 1 | Transfer PO for InterCompany Transfer Flag |
+| `CC_PO_LEAD_TIME` | D3 | 3 | PO Call Up Lead Time (in Days) |
+| `CC_VEND` | A8 | 8 | Default Vendor Code |
+| `CC_SORTCODE` | A4 | 4 | Sort Code for Printing |
+| `CC_DESCPRT` | A1 | 1 | Print Description on PO Flag |
+| `CC_QTYPRT` | A1 | 1 | Print Quantity on PO Flag |
+| `CC_RATEPRT` | A1 | 1 | Print Rate on PO Flag |
+| `CC_EXPRPRT` | A1 | 1 | Print Extended Price on PO Flag |
+| `CC_STRTEVNT` | D5 | 5 | Starting Event for PO Generation |
+| `CC_ENDEVNT` | D5 | 5 | Ending Event for PO Generation |
+| `CC_BATCHPRT` | A1 | 1 | Print POs from this CC Flag on Batch Prints |
+| `CC_POSUPPRS` | A1 | 1 | Suppress POs Flag When "Create PO from Est" |
+| `CC_STRTMTCH` | D5 | 5 | Starting Event for Allowing PO Matching |
+| `CC_ENDMTCH` | D5 | 5 | Ending Event for Allowing PO Matching |
+| `CC_PRELIMORD` | A1 | 1 | POs are Preliminary Orders Flag |
+| `CC_SUPPRESS` | A1 | 1 | Suppress Cost Centre Flag in ALL Explosions |
+| `CC_FINISH_ACC` | A15 | 15 | Alt Finished Goods GL Account |
+| `CC_FG_OPT` | A1 | 1 | Finished Goods Option (A=Actual, O=Outstanding P/O, B=Both) |
+| `CC_PRCDE` | A2 | 2 | Price Code |
+| `CC_SAVPLAN` | A1 | 1 | Savings Plan Cost Centre Flag |
+| `CC_CHANGE_VEND` | A1 | 1 | Allow Vendor Change at Order Generation Flag |
+| `CC_PRTPRICE` | A1 | 1 | Print Prices on PO Flag |
+| `CC_ACTIVE` | A1 | 1 | Cost Centre is Active Flag |

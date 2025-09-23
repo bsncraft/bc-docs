@@ -292,6 +292,78 @@
 | `JSEB_CRE_TIME` | D9 | 9 | Transaction Audit Time |
 | `JSEB_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
 
+## Job Sales Estimate Details (JCSPEC_C)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `JSEC_TYPE` | A1 | 1 | Record Type (c = Sales Estimate Details) |
+| `JSEC_JOBNUM` | A8 | 8 | Job Number |
+| `JSEC_SECT` | A2 | 2 | Sequence Number |
+| `JSEC_HEADING` | A4 | 4 | Heading Code |
+| `JSEC_PARAGRAPH` | A4 | 4 | Paragraph Code |
+| `JSEC_DETSEQ` | D5 | 5 | Sequence Code |
+| `JSEC_TKEY` | A23 | 23 | Job/Seq/Heading/Paragraph/Seq2 |
+| `JSEC_SCRKEY` | A26 | 26 | Job/Seq/Heading/Paragraph/Seq2 |
+| `JSEC_CONST` | A18 | 18 | Job/Seq/Heading/Paragraph |
+| `JSEC_TYPCONST` | A19 | 19 | Type/Job/Seq/Heading/Paragraph |
+| `JSEC_SPECCONST` | A23 | 23 | Job No/Section No/Heading Code |
+| `JSEC_KEY` | A27 | 27 | Primary Key (Type/Job/Seq/Heading/Para/Seq2) |
+| `JSEC_ITMNUM` | A15 | 15 | Item Number |
+| `JSEC_DESC` | A30 | 30 | Item Description |
+| `JSEC_COST` | D9 | 9 | Total Cost of the Five Costs Below |
+| `JSEC_LCOST` | D9 | 9 | Labour Cost Amount |
+| `JSEC_MCOST` | D9 | 9 | Material Cost Amount |
+| `JSEC_OCOST` | D9 | 9 | Other Cost Amount |
+| `JSEC_SCOST` | D9 | 9 | Subcontractor Cost Amount |
+| `JSEC_PCOST` | D9 | 9 | Purchases Cost Amount |
+| `JSEC_LEVEL` | A1 | 1 | Levels Entered Flag Below This One |
+| `JSEC_PROT` | A1 | 1 | Protect Cost Fields Flag (Has Levels Below) |
+| `JSEC_LSTSEQ` | D5 | 5 | Last Sequence Number for This Cost Centre |
+| `JSEC_DFLVEN` | A8 | 8 | Default Vendor Code |
+| `JSEC_ALTVEN` | A8 | 8 | Alternate Vendor Code |
+| `JSEC_POALLOC` | D9 | 9 | Value Alloc to Nominated Supplier |
+| `JSEC_POBALANCE` | D9 | 9 | Value Alloc to Default Vendor (Before Discount) |
+| `JSEC_DISCTYPE` | A1 | 1 | Discount Type (P=Percentage, F=Flat Rate) |
+| `JSEC_DISCAMNT` | D6 | 6 | Discount Amount (May be Flat Rate or %) |
+| `JSEC_PONET` | D9 | 9 | Net Amount to be Purchased from Default Vendor |
+| `JSEC_MISPRC` | A1 | 1 | Missing Prices Flag in Items Under This Item |
+| `JSEC_NOMSUPP` | A1 | 1 | Nominated Suppliers Flag Present Under C/C |
+| `JSEC_LOCKED` | A1 | 1 | Cost Centre Locked Flag |
+| `JSEC_ESTQTY` | D9 | 9 | Estimated Quantity |
+| `JSEC_SALE` | D9 | 9 | Unit Sale Amount |
+| `JSEC_UOM` | A4 | 4 | Unit of Measure |
+| `JSEC_SORTPARA` | A4 | 4 | Paragraph Code for Sorting |
+| `JSEC_MGNCDE` | A4 | 4 | Margin Code |
+| `JSEC_MGNPCT` | D5 | 5 | Margin Percent |
+| `JSEC_PRCFLG` | A2 | 2 | Price Flag (aka Price Display Flag) |
+| `JSEC_GST_INC` | A1 | 1 | If Yes then Sale Includes GST |
+| `JSEC_GST_CODE` | A1 | 1 | GST Tax Code |
+| `JSEC_GST_AMOUNT` | D9 | 9 | GST Amount |
+| `JSEC_GST_INCAMT` | D9 | 9 | GST Inclusive Amount (Unit) |
+| `JSEC_GST_AMTEXT` | D9 | 9 | GST Amount EXTENDED |
+| `JSEC_DISP_CHKBOX` | A1 | 1 | Display Check Box in Sales Automation |
+| `JSEC_DISP_QTYFLD` | A1 | 1 | Display Qty Field in Sales Automation |
+| `JSEC_DFLT_CHK` | A1 | 1 | Default Checked Value |
+| `JSEC_DFLT_QTY` | D9 | 9 | Default Quantity Value |
+| `JSEC_EXT` | A10 | 10 | Sales Estimate Extensions |
+| `JSEC_IMG_PATH` | A3 | 3 | Logical For Image Path |
+| `JSEC_IMG_FILE` | A30 | 30 | Filename of Image |
+| `JSEC_EDESC` | A30 | 30 | Extra Description |
+| `JSEC_PCT_COMPL` | D5 | 5 | Percentage Complete |
+| `JSEC_DISP_SELECT` | A1 | 1 | Display Select in Sales Website |
+| `JSEC_SORTORDER` | D6 | 6 | Sort Order |
+| `JSEC_TEMPLATE` | A6 | 6 | Template that This Line was Created From |
+| `JSEC_PONUM` | A15 | 15 | Purchase Order Number Line Added To |
+| `JSEC_SYNCSTATUS` | A1 | 1 | Sync Status |
+| `JSEC_MOD_USER` | A12 | 12 | Transaction Audit Initials |
+| `JSEC_MOD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `JSEC_MOD_TIME` | D9 | 9 | Transaction Audit Time |
+| `JSEC_MOD_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `JSEC_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `JSEC_CRE_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `JSEC_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `JSEC_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
 ## Production Estimate Cost Centres (JCSPECH)
 
 | Field | Type | Size | Description |

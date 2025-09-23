@@ -1,6 +1,6 @@
 # Purchase Order Tables
 
-## Purchase Order Header (POHEAD)
+## Purchase Order Header (POHEADA)
 
 | Field | Type | Size | Description |
 |-------|------|------|-------------|
@@ -133,7 +133,7 @@
 | `PO_ETS_PERRESP` | A3 | 3 | Saved for Purchase Order Person Responsible from BCGO |
 | `PO_REMOTE` | A1 | 1 | Purchase Order Was Created via a Remote Process Flag |
 
-## Purchase Order Lines (POLINE)
+## Purchase Order Lines (POLINEA)
 
 | Field | Type | Size | Description |
 |-------|------|------|-------------|
@@ -222,3 +222,120 @@
 | `POL_CRE_DATE` | D7 | 7 | Transaction Audit Date |
 | `POL_CRE_TIME` | D9 | 9 | Transaction Audit Time |
 | `POL_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
+## Purchase Order Specifications (POSPECA)
+
+Purchase order specification lines and descriptions.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `POS_TYPE` | A1 | 1 | Record Type (A = Description) |
+| `POS_PONUM` | A15 | 15 | Purchase Order Number |
+| `POS_POLSEQ` | D3 | 3 | P/Order Lines Sequence No |
+| `POS_SEQ` | D3 | 3 | Sequence Number |
+| `POS_SCRKEY` | A21 | 21 | PO/Line Seq/Seq |
+| `POS_CONST` | A18 | 18 | PO/Line Seq |
+| `POS_KEY` | A22 | 22 | Type/PO/Line Seq/Seq |
+| `POS_DESC` | A50 | 50 | Instruction line |
+| `POS_DSTAMP` | D7 | 7 | Date Stamp (Julian) |
+| `POS_TSTAMP` | D6 | 6 | Time Stamp |
+
+## Purchase Order Document Register Notes (POSPECD)
+
+Purchase order document register notes and comments.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `POSD_TYPE` | A1 | 1 | Table type (D = 'PO Document Register Notes') |
+| `POSD_PONUM` | A15 | 15 | PO Number |
+| `POSD_DRSEQ` | D3 | 3 | Doc Reg Sequence Number |
+| `POSD_SEQ` | D3 | 3 | Sequence Number |
+| `POSD_SCRKEY` | A21 | 21 | PO NO./SEQUENCE NO |
+| `POSD_CONST` | A18 | 18 | PO NO./SEQUENCE NO |
+| `POSD_KEY` | A22 | 22 | TYPE/PO/SEQUENCE |
+| `POSD_SPEC` | A155 | 155 | Comment Text |
+| `POSD_AUD_INIT` | A3 | 3 | Transaction Audit Initials |
+| `POSD_AUD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `POSD_AUD_TIME` | D6 | 6 | Transaction Audit Time |
+| `POSD_AUDIT` | A16 | 16 | Trans Audit Initials/Date/Time |
+
+## Purchase Order Back Charge Lines (POSPECG)
+
+Purchase order back charge line items for supplier charges.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `POSG_TYPE` | A1 | 1 | Table type (G = 'PO Back Charge Lines') |
+| `POSG_PONUM` | A15 | 15 | PO Number |
+| `POSG_SEQ` | D3 | 3 | Sequence Number |
+| `POSG_SCRKEY` | A18 | 18 | PO/Seq |
+| `POSG_CONST` | A16 | 16 | TYPE/PO |
+| `POSG_KEY` | A22 | 22 | TYPE/PO/SEQ |
+| `POSG_TKEY` | A19 | 19 | TYPE/PO/SEQ |
+| `POSG_SEQA` | A3 | 3 | Sequence Number Alpha |
+| `POSG_STATUS` | A1 | 1 | Status (Blank=Open, I=Invoiced, X=Cancelled) |
+| `POSG_VENDOR` | A8 | 8 | Supplier Code |
+| `POSG_INVNUM` | A15 | 15 | Invoice Number |
+| `POSG_CRQNUM` | A15 | 15 | Credit Request Number |
+| `POSG_COMMENT` | A30 | 30 | Comment Text |
+| `POSG_GST_CODE` | A1 | 1 | GST Code |
+| `POSG_APREF` | A12 | 12 | AP CR Transaction Reference |
+| `POSG_AP_JNLBAT` | A6 | 6 | AP Journal Batch |
+| `POSG_AP_VCHSEQ` | D6 | 6 | AP Voucher Sequence |
+| `POSG_AMOUNT` | D10 | 10 | Amount |
+| `POSG_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `POSG_CRE_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `POSG_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `POSG_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `POSG_MOD_USER` | A12 | 12 | Transaction Audit Initials |
+| `POSG_MOD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `POSG_MOD_TIME` | D9 | 9 | Transaction Audit Time |
+| `POSG_MOD_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `POSG_INV_USER` | A12 | 12 | Transaction Audit Initials |
+| `POSG_INV_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `POSG_INV_TIME` | D9 | 9 | Transaction Audit Time |
+| `POSG_INV_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
+## Purchase Order Back Charge Notes (POSPECH)
+
+Purchase order back charge lines specifications and notes.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `POSH_TYPE` | A1 | 1 | Table type (F = 'PO Back Charge Notes') |
+| `POSH_PONUM` | A15 | 15 | PO Number |
+| `POSH_SUBSEQ` | D3 | 3 | Sub Sequence Number |
+| `POSH_SEQ` | D3 | 3 | Sequence Number |
+| `POSH_SCRKEY` | A21 | 21 | PO NO./SUB SEQ/SEQUENCE |
+| `POSH_CONST` | A18 | 18 | PO NO./SUB SEQ |
+| `POSH_KEY` | A22 | 22 | TYPE/PO/SUB SEQ/SEQUENCE |
+| `POSH_SPEC` | A155 | 155 | Comment Text |
+| `POSH_AUD_INIT` | A3 | 3 | Transaction Audit Initials |
+| `POSH_AUD_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `POSH_AUD_TIME` | D6 | 6 | Transaction Audit Time |
+| `POSH_AUDIT` | A16 | 16 | Trans Audit Initials/Date/Time |
+
+## Purchase Order Issued Against (POSPECI)
+
+Purchase order issued against tracking for variations and other POs.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `POSI_TYPE` | A1 | 1 | Table type (I = 'PO Issued Against') |
+| `POSI_PONUM` | A15 | 15 | PO Number |
+| `POSI_SEQ` | D3 | 3 | Sequence Number |
+| `POSI_ASEQ` | A3 | 3 | Sequence Number Alpha |
+| `POSI_SCRKEY` | A18 | 18 | PO NO./SEQUENCE NO |
+| `POSI_CONST` | A15 | 15 | PO NO. |
+| `POSI_TCONST` | A16 | 16 | TYPE/PO |
+| `POSI_TKEY` | A19 | 19 | TYPE/PO/SEQUENCE |
+| `POSI_KEY` | A22 | 22 | TYPE/PO/SEQUENCE |
+| `POSI_ISS_TYPE` | A1 | 1 | Issued Type (P=PO, V=Variation) |
+| `POSI_ISS_PO` | A15 | 15 | PO/Variation Issued Against |
+| `POSI_TOT_AMT` | D11 | 11 | Total Amount |
+| `POSI_AVL_AMT` | D11 | 11 | Available Amount |
+| `POSI_ISS_AMT` | D11 | 11 | Issued Amount |
+| `POSI_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `POSI_CRE_DATE` | D7 | 7 | Transaction Audit Date (Julian) |
+| `POSI_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `POSI_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
