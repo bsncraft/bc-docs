@@ -137,3 +137,57 @@ This table holds the primary customer information including contact details, fin
 | `CM_CRE_DATE` | D7 | 7 | Transaction Audit Date |
 | `CM_CRE_TIME` | D9 | 9 | Transaction Audit Time |
 | `CM_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+
+## Contacts Multi Addresses (IVCTBLU)
+
+This table stores multiple addresses for customer contacts, allowing customers to have different addresses for billing, shipping, and other purposes.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `IVTU_TYPE` | A1 | 1 | Table Type |
+| `IVTU_CUSTNO` | A6 | 6 | Customer Number |
+| `IVTU_SEQNUM` | D3 | 3 | Sequence Number |
+| `IVTU_KEY` | A10 | 10 | Primary Key |
+| `IVTU_SURNAME` | A20 | 20 | Contact Surname |
+| `IVTU_FIRSTNAME` | A15 | 15 | Contact First Name |
+| `IVTU_TITLE` | A10 | 10 | Contact Title |
+| `IVTU_COMPANY` | A30 | 30 | Company Name |
+| `IVTU_ADD1` | A30 | 30 | Address Line 1 |
+| `IVTU_ADD2` | A30 | 30 | Address Line 2 |
+| `IVTU_ADD3` | A30 | 30 | Address Line 3 |
+| `IVTU_CITY` | A25 | 25 | City |
+| `IVTU_STATE` | A15 | 15 | State |
+| `IVTU_ZIP` | A8 | 8 | Post Code |
+| `IVTU_PHONE` | A20 | 20 | Phone Number |
+| `IVTU_FAX` | A20 | 20 | Fax Number |
+| `IVTU_MOBILE` | A20 | 20 | Mobile Number |
+| `IVTU_EMAIL` | A50 | 50 | Email Address |
+| `IVTU_ACTIVE` | A1 | 1 | Active Flag |
+| `IVTU_MOD_USER` | A12 | 12 | Modified Audit User |
+| `IVTU_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `IVTU_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `IVTU_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `IVTU_CRE_USER` | A12 | 12 | Creation Audit User |
+| `IVTU_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `IVTU_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `IVTU_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Customer Titles (COTABLC)
+
+This table defines customer titles for proper addressing and contact management.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `COTC_TYPE` | A1 | 1 | Table Type |
+| `COTC_CODE` | A6 | 6 | Title Code |
+| `COTC_KEY` | A10 | 10 | Key |
+| `COTC_DESC` | A30 | 30 | Title Long Form |
+| `COTC_SYNCSTATUS` | A1 | 1 | Sync Status |
+| `COTC_MOD_USER` | A12 | 12 | Transaction Audit Initials |
+| `COTC_MOD_DATE` | D7 | 7 | Transaction Audit Date |
+| `COTC_MOD_TIME` | D9 | 9 | Transaction Audit Time |
+| `COTC_MOD_STAMP` | A28 | 28 | Audit Initials/Date/Time |
+| `COTC_CRE_USER` | A12 | 12 | Transaction Audit Initials |
+| `COTC_CRE_DATE` | D7 | 7 | Transaction Audit Date |
+| `COTC_CRE_TIME` | D9 | 9 | Transaction Audit Time |
+| `COTC_CRE_STAMP` | A28 | 28 | Audit Initials/Date/Time |

@@ -4,7 +4,7 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 
 ## Table Categories
 
-### Contract Management (10 tables)
+### Contract Management (18 tables)
 | Table | File | Tag | Purpose | Key Fields |
 |-------|------|-----|---------|------------|
 | CONHDRA | 222 | A | Contract Header | CO_CONTRACT, CO_JOBNUM, CO_CUSNUM |
@@ -17,6 +17,14 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | CONLINW | 223 | W | Document Register | CLW_CONTRACT, CLW_SEQNUM, CLW_DOCTYP |
 | CONLINX | 223 | X | Document Notes | CLX_CONTRACT, CLX_DOCNUM, CLX_SEQNUM |
 | CONLINZ | 223 | Z | Specifications/Comments | CLN_CONTRACT, CLN_SEQNUM, CLN_DESC |
+| COTABLU | 198 | U | Sale Types | COTU_CODE, COTU_DESC, COTU_GROUP |
+| COTABLV | 198 | V | Sales Groups | COTV_CODE, COTV_DESC |
+| COTABLW | 198 | W | Events | COTW_CODE, COTW_DESC |
+| COTABLY | 198 | Y | Operating Centres | COTY_CODE, COTY_DESC |
+| COTABLZ | 198 | Z | Districts | COTZ_CODE, COTZ_DESC |
+| COTABL_C | 198 | c | Councils | COT_C_CODE, COT_C_DESC |
+| COTABL_D | 198 | d | Estates | COT_D_CODE, COT_D_DESC |
+| COTABL_M | 198 | m | Contract Status | COT_M_CODE, COT_M_DESC |
 
 ### Job Costing (11 tables)
 | Table | File | Tag | Purpose | Key Fields |
@@ -33,17 +41,23 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | JCSPEC0 | 241 | 0 | Sales Estimate Detail Specs | JS0_JOBNUM, JS0_SECT, JS0_HEADING |
 | JCSPECM | 241 | M | Job Contract Information | JSM_JOBNUM |
 
-### Inventory Management (3 tables)
+### Inventory Management (7 tables)
 | Table | File | Tag | Purpose | Key Fields |
 |-------|------|-----|---------|------------|
 | ITMMASA | 041 | A | Inventory Master | ITEMNO, DESCR, VENDOR, LSTCST |
 | ITMLINI | 240 | I | Inventory Instructions | ILI_ITEM, ILI_SEQ, ILI_INSTRUCT |
 | ITMLINK | 240 | K | Alt State Codes | ILK_ITEM, ILK_CODE, ILK_DESC |
+| INVTBLA | 275 | A | Product Groups | PG_GROUP, PG_DESC |
+| INVTBLB | 275 | B | Product Categories | PC_CATEGORY, PC_DESC, PC_GROUP |
+| INVTBLG | 275 | G | Unit of Measure | UM_CODE, UM_DESC |
+| INVTBLI | 275 | I | Rate Area Codes | RAC_CODE, RAC_DESC |
 
-### Customer Management (1 table)
+### Customer Management (3 tables)
 | Table | File | Tag | Purpose | Key Fields |
 |-------|------|-----|---------|------------|
 | CUSMASA | 001 | A | Customer Master | CUSNO, CM_NAME, ADD1, CITY, STATE |
+| IVCTBLU | 148 | U | Contacts Multi Addresses | IVTU_CUSTNO, IVTU_SEQNUM, IVTU_SURNAME |
+| COTABLC | 198 | C | Customer Titles | COTC_CODE, COTC_DESC |
 
 ### Purchase Orders (7 tables)
 | Table | File | Tag | Purpose | Key Fields |
@@ -87,28 +101,13 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ, CXRF_CONTACT |
 | EMLADDA | 294 | A | Email Addresses | EMLA_REFCODE, EMLA_SEQ, EMLA_ADDRESS |
 
-### Lookup Tables (19 tables)
+### Lookup Tables (4 tables)
 | Table | File | Tag | Purpose | Key Fields |
 |-------|------|-----|---------|------------|
-| COTABLC | 198 | C | Customer Titles | COTC_CODE, COTC_DESC |
 | COTABLD | 198 | D | User Categories | COTD_CODE, COTD_TITLE |
 | COTABLG | 198 | G | User Table | COTG_CODE, COTG_NAME, COTG_CATCODE |
-| COTABLP | 198 | P | Projects | COTP_CODE, COTP_DESC, COTP_OPCENTRE |
-| COTABLU | 198 | U | Sale Types | COTU_CODE, COTU_DESC, COTU_GROUP |
-| COTABLV | 198 | V | Sales Groups | COTV_CODE, COTV_DESC |
-| COTABLW | 198 | W | Events | COTW_CODE, COTW_DESC |
-| COTABLY | 198 | Y | Operating Centres | COTY_CODE, COTY_DESC |
-| COTABLZ | 198 | Z | Districts | COTZ_CODE, COTZ_DESC |
-| COTABL_C | 198 | c | Councils | COT_C_CODE, COT_C_DESC |
-| COTABL_D | 198 | d | Estates | COT_D_CODE, COT_D_DESC |
-| COTABL_M | 198 | m | Contract Status | COT_M_CODE, COT_M_DESC |
-| IVCTBLU | 148 | U | Contacts Multi Addresses | IVTU_CUSTNO, IVTU_SEQNUM, IVTU_SURNAME |
 | IVCTBLP | 148 | P | Word Processing Document Types | IVWP_MODULE, IVWP_CODE, IVWP_DESCR |
 | JOBTBLA | 247 | A | Cost Centre Table | CC_CODE, CC_DESC |
-| INVTBLA | 275 | A | Product Groups | PG_GROUP, PG_DESC |
-| INVTBLB | 275 | B | Product Categories | PC_CATEGORY, PC_DESC, PC_GROUP |
-| INVTBLG | 275 | G | Unit of Measure | UM_CODE, UM_DESC, UM_MULT |
-| INVTBLI | 275 | I | Rate Area Codes | RAC_CODE, RAC_DESC |
 
 ### Communication (2 tables)
 | Table | File | Tag | Purpose | Key Fields |

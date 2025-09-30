@@ -195,3 +195,77 @@
 | `ITK_STATE` | A2 | 2 | State Code |
 | `ITK_DESC` | A30 | 30 | State Description |
 | `ITK_ACTIVE` | A1 | 1 | Active Flag |
+
+## Product Groups (INVTBLA)
+
+This table defines product groups for inventory categorization and reporting.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `PG_GROUP` | A2 | 2 | Product Group Code |
+| `PG_DESC` | A30 | 30 | Product Group Description |
+| `PG_ACTIVE` | A1 | 1 | Active Flag |
+| `PG_MOD_USER` | A12 | 12 | Modified Audit User |
+| `PG_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `PG_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `PG_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `PG_CRE_USER` | A12 | 12 | Creation Audit User |
+| `PG_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `PG_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `PG_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Product Categories (INVTBLB)
+
+This table defines product categories for detailed inventory classification.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `PC_CATEGORY` | A2 | 2 | Product Category Code |
+| `PC_DESC` | A30 | 30 | Product Category Description |
+| `PC_GROUP` | A2 | 2 | Product Group Code |
+| `PC_ACTIVE` | A1 | 1 | Active Flag |
+| `PC_MOD_USER` | A12 | 12 | Modified Audit User |
+| `PC_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `PC_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `PC_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `PC_CRE_USER` | A12 | 12 | Creation Audit User |
+| `PC_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `PC_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `PC_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Unit of Measure (INVTBLG)
+
+This table defines units of measure for inventory items.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `UM_CODE` | A2 | 2 | Unit of Measure Code |
+| `UM_DESC` | A30 | 30 | Unit of Measure Description |
+| `UM_MULT` | D8 | 8 | Multiplier Factor |
+| `UM_ACTIVE` | A1 | 1 | Active Flag |
+| `UM_MOD_USER` | A12 | 12 | Modified Audit User |
+| `UM_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `UM_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `UM_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `UM_CRE_USER` | A12 | 12 | Creation Audit User |
+| `UM_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `UM_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `UM_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Rate Area Codes (INVTBLI)
+
+This table defines rate area codes for inventory pricing and distribution.
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `RAC_CODE` | A2 | 2 | Rate Area Code |
+| `RAC_DESC` | A30 | 30 | Rate Area Description |
+| `RAC_ACTIVE` | A1 | 1 | Active Flag |
+| `RAC_MOD_USER` | A12 | 12 | Modified Audit User |
+| `RAC_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `RAC_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `RAC_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `RAC_CRE_USER` | A12 | 12 | Creation Audit User |
+| `RAC_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `RAC_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `RAC_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
