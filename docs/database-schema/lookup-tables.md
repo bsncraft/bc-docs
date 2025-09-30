@@ -508,3 +508,121 @@
 | `CC_CHANGE_VEND` | A1 | 1 | Allow Vendor Change at Order Generation Flag |
 | `CC_PRTPRICE` | A1 | 1 | Print Prices on PO Flag |
 | `CC_ACTIVE` | A1 | 1 | Cost Centre is Active Flag |
+
+## Product Groups (INVTBLA)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `PG_TYPE` | A1 | 1 | Table Type |
+| `PG_GROUP` | A2 | 2 | Product Group Code |
+| `PG_KEY` | A7 | 7 | Primary Key (Type/Product Code) |
+| `PG_DESC` | A30 | 30 | Product Group Description |
+| `PG_ACTIVE` | A1 | 1 | Product Group is Active Flag |
+| `PG_MOD_USER` | A12 | 12 | Modified Audit User |
+| `PG_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `PG_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `PG_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `PG_CRE_USER` | A12 | 12 | Creation Audit User |
+| `PG_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `PG_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `PG_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Product Categories (INVTBLB)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `PC_TYPE` | A1 | 1 | Table Type |
+| `PC_CATEGORY` | A2 | 2 | Category Code |
+| `PC_KEY` | A7 | 7 | Primary Key (Type/Category) |
+| `PC_GROUP` | A2 | 2 | Product Group |
+| `PC_CATEGORY2` | A2 | 2 | Category Reference for Key 2 |
+| `PC_DESC` | A30 | 30 | Product Category Description |
+| `PC_GLACCT` | A15 | 15 | General Ledger Expense Account |
+| `PC_MARGIN` | D5 | 5 | Default Margin (Precision 2) |
+| `PC_SERIAL` | A1 | 1 | Serial Numbers Tracked Flag |
+| `PC_STKGRP` | A1 | 1 | Stock Groups Created Flag |
+| `PC_DISCOUNT` | A1 | 1 | Discount Calculated Flag |
+| `PC_BINCTYPE` | A1 | 1 | Bin Control Type |
+| `PC_BTRACK` | A1 | 1 | Batch Tracing Enabled Flag |
+| `PC_SLSCBPP` | D4 | 4 | Sales Commission Base Price Percentage (Precision 2) |
+| `PC_DEF_CNTRLD` | A1 | 1 | Default Controlled for New Inventory Items |
+| `PC_EST_MARKUP` | D5 | 5 | Detailed Estimate Markup |
+| `PC_SELL_ON_PURCH` | A1 | 1 | Default Sell Price on Purchases Flag |
+| `PC_UPDPRC` | A1 | 1 | Auto Update Sell Price Flag |
+| `PC_ACTIVE` | A1 | 1 | Active Flag |
+| `PC_SAFETY_STOCK` | D5 | 5 | Safety Stock Percentage (Precision 2) |
+| `PC_ORDER_FACTOR` | D4 | 4 | Order Up To Factor (Precision 2) |
+| `PC_MOD_USER` | A12 | 12 | Modified Audit User |
+| `PC_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `PC_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `PC_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `PC_CRE_USER` | A12 | 12 | Creation Audit User |
+| `PC_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `PC_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `PC_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Unit of Measure (INVTBLG)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `UM_TYPE` | A1 | 1 | Table Type |
+| `UM_CODE` | A2 | 2 | Unit of Measure Code |
+| `UM_KEY` | A7 | 7 | Primary Key (Type/UOM Code) |
+| `UM_SCRKEY` | A2 | 2 | UOM Code (Screen Key) |
+| `UM_DESC` | A30 | 30 | Unit of Measure Description |
+| `UM_ROUND` | A1 | 1 | Rounding Flag |
+| `UM_PRICE` | A1 | 1 | Price Entry Allowed Flag |
+| `UM_LENGTH` | A1 | 1 | Length Entry Allowed Flag |
+| `UM_QTY` | A1 | 1 | Quantity Entry Allowed Flag |
+| `UM_MULT` | D4 | 4 | Multiplier |
+| `UM_DEC_PLC` | D1 | 1 | Decimal Places to Round To |
+| `UM_CONSOL` | A1 | 1 | Consolidate Flag (Y/N/I=Infinite Length) |
+| `UM_SDESC` | A10 | 10 | Short Description |
+| `UM_PRCOPT` | A1 | 1 | Price Calculation Option |
+| `UM_CHKMIS` | A1 | 1 | Check for Missing Prices Flag |
+| `UM_REPALW` | A1 | 1 | Allow Repricing of Item Flag |
+| `UM_DSCINP` | A1 | 1 | Description Entry Allowed Flag |
+| `UM_EXPZRO` | A1 | 1 | Price Set to Zero on Explode Flag |
+| `UM_SUPQTY` | A1 | 1 | Quantity Suppressed if One Flag |
+| `UM_INCACCUM` | A1 | 1 | Quantity of One Included in Accumulation Flag |
+| `UM_REF_CODE` | A8 | 8 | UOM Reference Code |
+| `UM_LBL_OPT` | A1 | 1 | UOM Label Print Option (I=Individual, C=Container) |
+| `UM_EXTRA_OPT` | A1 | 1 | Extra Charge Option (O=Once Only, D=Daily, W=Weekly) |
+| `UM_MOD_USER` | A12 | 12 | Modified Audit User |
+| `UM_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `UM_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `UM_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `UM_CRE_USER` | A12 | 12 | Creation Audit User |
+| `UM_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `UM_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `UM_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## Rate Area Codes (INVTBLI)
+
+| Field | Type | Size | Description |
+|-------|------|------|-------------|
+| `RAC_TYPE` | A1 | 1 | Table Type |
+| `RAC_CODE` | A4 | 4 | Rate Area Table Code |
+| `RAC_KEY` | A7 | 7 | Primary Key (Type/Rate Area Table Code) |
+| `RAC_DESC` | A30 | 30 | Rate Area Name |
+| `RAC_CON_CAT` | A3 | 3 | Rate Contact Category |
+| `RAC_REG_AREA` | A4 | 4 | Regional Area |
+| `RAC_ACTIVE` | A1 | 1 | Area is Active Flag |
+| `RAC_MOD_USER` | A12 | 12 | Modified Audit User |
+| `RAC_MOD_DATE` | D7 | 7 | Modified Audit Date (Julian) |
+| `RAC_MOD_TIME` | D9 | 9 | Modified Audit Time |
+| `RAC_MOD_STAMP` | A28 | 28 | Modified Audit Stamp |
+| `RAC_CRE_USER` | A12 | 12 | Creation Audit User |
+| `RAC_CRE_DATE` | D7 | 7 | Creation Audit Date (Julian) |
+| `RAC_CRE_TIME` | D9 | 9 | Creation Audit Time |
+| `RAC_CRE_STAMP` | A28 | 28 | Creation Audit Stamp |
+
+## BuiltGrid Integration Notes
+
+The Inventory Management lookup tables (INVTBL*) are critical for BuiltGrid integration as they provide:
+
+- **Product Classification**: Groups and categories for organizing inventory items
+- **Unit of Measure**: Comprehensive UOM definitions with calculation rules
+- **Rate Areas**: Geographic rate areas for supplier pricing variations
+
+These tables support the complete inventory lifecycle from procurement through to delivery and are essential for accurate cost calculations, pricing, and supplier management in the BuiltGrid integration.

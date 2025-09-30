@@ -87,7 +87,7 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ, CXRF_CONTACT |
 | EMLADDA | 294 | A | Email Addresses | EMLA_REFCODE, EMLA_SEQ, EMLA_ADDRESS |
 
-### Lookup Tables (15 tables)
+### Lookup Tables (19 tables)
 | Table | File | Tag | Purpose | Key Fields |
 |-------|------|-----|---------|------------|
 | COTABLC | 198 | C | Customer Titles | COTC_CODE, COTC_DESC |
@@ -105,6 +105,10 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | IVCTBLU | 148 | U | Contacts Multi Addresses | IVTU_CUSTNO, IVTU_SEQNUM, IVTU_SURNAME |
 | IVCTBLP | 148 | P | Word Processing Document Types | IVWP_MODULE, IVWP_CODE, IVWP_DESCR |
 | JOBTBLA | 247 | A | Cost Centre Table | CC_CODE, CC_DESC |
+| INVTBLA | 275 | A | Product Groups | PG_GROUP, PG_DESC |
+| INVTBLB | 275 | B | Product Categories | PC_CATEGORY, PC_DESC, PC_GROUP |
+| INVTBLG | 275 | G | Unit of Measure | UM_CODE, UM_DESC, UM_MULT |
+| INVTBLI | 275 | I | Rate Area Codes | RAC_CODE, RAC_DESC |
 
 ### Communication (2 tables)
 | Table | File | Tag | Purpose | Key Fields |
@@ -228,7 +232,11 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | 68 | IVCTBLU | 148 | U | Contacts Multi Addresses | IVTU_CUSTNO, IVTU_SEQNUM, IVTU_SURNAME |
 | 69 | IVCTBLP | 148 | P | Word Processing Document Types | IVWP_MODULE, IVWP_CODE, IVWP_DESCR |
 | 70 | JOBTBLA | 247 | A | Cost Centre Table | CC_CODE, CC_DESC |
-| 71 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ |
+| 71 | INVTBLA | 275 | A | Product Groups | PG_GROUP, PG_DESC |
+| 72 | INVTBLB | 275 | B | Product Categories | PC_CATEGORY, PC_DESC |
+| 73 | INVTBLG | 275 | G | Unit of Measure | UM_CODE, UM_DESC |
+| 74 | INVTBLI | 275 | I | Rate Area Codes | RAC_CODE, RAC_DESC |
+| 75 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ |
 
 ## Next Steps
 
