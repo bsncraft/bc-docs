@@ -56,6 +56,24 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | POSPECH | 289 | H | PO Back Charge Notes | POSH_PONUM, POSH_SUBSEQ, POSH_SPEC |
 | POSPECI | 289 | I | PO Issued Against | POSI_PONUM, POSI_SEQ, POSI_ISS_PO |
 
+### Request for Quote (14 tables)
+| Table | File | Tag | Purpose | Key Fields |
+|-------|------|-----|---------|------------|
+| RFQHDRA | 209 | A | Request for Quote Header | RFQ_ID, RFQ_JOBNUM, RFQ_STATUS |
+| RFQLINA | 210 | A | RFQ Notes | RFQLA_ID, RFQLA_SEQNUM, RFQLA_NOTES |
+| RFQLINB | 210 | B | RFQ Lines | RFQLB_ID, RFQLB_SEQNUM, RFQLB_ITEM |
+| RFQLINC | 210 | C | RFQ Line Notes | RFQLC_ID, RFQLC_LINE_SEQ, RFQLC_NOTES |
+| RFQLIND | 210 | D | RFQ Documents | RFQLD_ID, RFQLD_SEQNUM, RFQLD_DOCTYP |
+| RFQLINE | 210 | E | RFQ Document Notes | RFQLE_ID, RFQLE_DOC_SEQ, RFQLE_NOTES |
+| RFQLINF | 210 | F | RFQ Suppliers | RFQLF_ID, RFQLF_VENDOR, RFQLF_NAME |
+| RFQLING | 210 | G | RFQ Work Types | RFQLG_ID, RFQLG_SEQNUM, RFQLG_TYPE_ID |
+| RFQLINH | 210 | H | RFQ Quote Header | RFQLH_ID, RFQLH_QUOTE_ID, RFQLH_VENDOR |
+| RFQLINI | 210 | I | RFQ Quote Notes | RFQLI_ID, RFQLI_QUOTE_ID, RFQLI_NOTES |
+| RFQLINJ | 210 | J | RFQ Quote Lines | RFQLJ_ID, RFQLJ_QUOTE_ID, RFQLJ_ITEM |
+| RFQLINK | 210 | K | RFQ Quote Line Notes | RFQLK_ID, RFQLK_QUOTE_ID, RFQLK_NOTES |
+| RFQLINL | 210 | L | RFQ Quote Documents | RFQLL_ID, RFQLL_QUOTE_ID, RFQLL_DOCTYP |
+| RFQLINM | 210 | M | RFQ Quote Document Notes | RFQLM_ID, RFQLM_QUOTE_ID, RFQLM_NOTES |
+
 ### Vendors (9 tables)
 | Table | File | Tag | Purpose | Key Fields |
 |-------|------|-----|---------|------------|
@@ -172,31 +190,45 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 | 30 | POSPECG | 289 | G | PO Back Charge Lines | POSG_PONUM, POSG_SEQ |
 | 31 | POSPECH | 289 | H | PO Back Charge Notes | POSH_PONUM, POSH_SUBSEQ |
 | 32 | POSPECI | 289 | I | PO Issued Against | POSI_PONUM, POSI_SEQ |
-| 33 | VENMASA | 011 | A | Vendor Master | VM_VENNO, VM_NAME |
-| 34 | VENLINA | 012 | A | Vendor Notes | VLA_VENNO, VLA_SEQ |
-| 35 | VENLINB | 012 | B | Vendor Note Specs | VLB_VENNO, VLB_NOTESEQ |
-| 36 | VENLINC | 012 | C | Vendor Rebates | VLC_VENNO, VLC_SEQ |
-| 37 | VENLIND | 012 | D | Vendor Standard Items | VLD_VENNO, VLD_SEQ |
-| 38 | CNTFILB | 095 | B | Contact Addresses | CNTB_ADDRESS, CNTB_SUBURB |
-| 39 | CNTFILC | 095 | C | Contact Categories | CNTC_CONTYP, CNTC_CODE |
-| 40 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ |
-| 41 | EMLADDA | 294 | A | Email Addresses | EMLA_REFCODE, EMLA_SEQ |
-| 42 | COTABLC | 198 | C | Customer Titles | COTC_CODE, COTC_DESC |
-| 43 | COTABLD | 198 | D | User Categories | COTD_CODE, COTD_TITLE |
-| 44 | COTABLG | 198 | G | User Table | COTG_CODE, COTG_NAME |
-| 45 | COTABLP | 198 | P | Projects | COTP_CODE, COTP_DESC |
-| 46 | COTABLU | 198 | U | Sale Types | COTU_CODE, COTU_DESC |
-| 47 | COTABLV | 198 | V | Sales Groups | COTV_CODE, COTV_DESC |
-| 48 | COTABLW | 198 | W | Events | COTW_CODE, COTW_DESC |
-| 49 | COTABLY | 198 | Y | Operating Centres | COTY_CODE, COTY_DESC |
-| 50 | COTABLZ | 198 | Z | Districts | COTZ_CODE, COTZ_DESC |
-| 51 | COTABL_C | 198 | c | Councils | COT_C_CODE, COT_C_DESC |
-| 52 | COTABL_D | 198 | d | Estates | COT_D_CODE, COT_D_DESC |
-| 53 | COTABL_M | 198 | m | Contract Status | COT_M_CODE, COT_M_DESC |
-| 54 | IVCTBLU | 148 | U | Contacts Multi Addresses | IVTU_CUSTNO, IVTU_SEQNUM, IVTU_SURNAME |
-| 55 | IVCTBLP | 148 | P | Word Processing Document Types | IVWP_MODULE, IVWP_CODE, IVWP_DESCR |
-| 56 | JOBTBLA | 247 | A | Cost Centre Table | CC_CODE, CC_DESC |
-| 57 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ |
+| 33 | RFQHDRA | 209 | A | Request for Quote Header | RFQ_ID, RFQ_JOBNUM |
+| 34 | RFQLINA | 210 | A | RFQ Notes | RFQLA_ID, RFQLA_SEQNUM |
+| 35 | RFQLINB | 210 | B | RFQ Lines | RFQLB_ID, RFQLB_SEQNUM |
+| 36 | RFQLINC | 210 | C | RFQ Line Notes | RFQLC_ID, RFQLC_LINE_SEQ |
+| 37 | RFQLIND | 210 | D | RFQ Documents | RFQLD_ID, RFQLD_SEQNUM |
+| 38 | RFQLINE | 210 | E | RFQ Document Notes | RFQLE_ID, RFQLE_DOC_SEQ |
+| 39 | RFQLINF | 210 | F | RFQ Suppliers | RFQLF_ID, RFQLF_VENDOR |
+| 40 | RFQLING | 210 | G | RFQ Work Types | RFQLG_ID, RFQLG_SEQNUM |
+| 41 | RFQLINH | 210 | H | RFQ Quote Header | RFQLH_ID, RFQLH_QUOTE_ID |
+| 42 | RFQLINI | 210 | I | RFQ Quote Notes | RFQLI_ID, RFQLI_QUOTE_ID |
+| 43 | RFQLINJ | 210 | J | RFQ Quote Lines | RFQLJ_ID, RFQLJ_QUOTE_ID |
+| 44 | RFQLINK | 210 | K | RFQ Quote Line Notes | RFQLK_ID, RFQLK_QUOTE_ID |
+| 45 | RFQLINL | 210 | L | RFQ Quote Documents | RFQLL_ID, RFQLL_QUOTE_ID |
+| 46 | RFQLINM | 210 | M | RFQ Quote Document Notes | RFQLM_ID, RFQLM_QUOTE_ID |
+| 47 | VENMASA | 011 | A | Vendor Master | VM_VENNO, VM_NAME |
+| 48 | VENLINA | 012 | A | Vendor Notes | VLA_VENNO, VLA_SEQ |
+| 49 | VENLINB | 012 | B | Vendor Note Specs | VLB_VENNO, VLB_NOTESEQ |
+| 50 | VENLINC | 012 | C | Vendor Rebates | VLC_VENNO, VLC_SEQ |
+| 51 | VENLIND | 012 | D | Vendor Standard Items | VLD_VENNO, VLD_SEQ |
+| 52 | CNTFILB | 095 | B | Contact Addresses | CNTB_ADDRESS, CNTB_SUBURB |
+| 53 | CNTFILC | 095 | C | Contact Categories | CNTC_CONTYP, CNTC_CODE |
+| 54 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ |
+| 55 | EMLADDA | 294 | A | Email Addresses | EMLA_REFCODE, EMLA_SEQ |
+| 56 | COTABLC | 198 | C | Customer Titles | COTC_CODE, COTC_DESC |
+| 57 | COTABLD | 198 | D | User Categories | COTD_CODE, COTD_TITLE |
+| 58 | COTABLG | 198 | G | User Table | COTG_CODE, COTG_NAME |
+| 59 | COTABLP | 198 | P | Projects | COTP_CODE, COTP_DESC |
+| 60 | COTABLU | 198 | U | Sale Types | COTU_CODE, COTU_DESC |
+| 61 | COTABLV | 198 | V | Sales Groups | COTV_CODE, COTV_DESC |
+| 62 | COTABLW | 198 | W | Events | COTW_CODE, COTW_DESC |
+| 63 | COTABLY | 198 | Y | Operating Centres | COTY_CODE, COTY_DESC |
+| 64 | COTABLZ | 198 | Z | Districts | COTZ_CODE, COTZ_DESC |
+| 65 | COTABL_C | 198 | c | Councils | COT_C_CODE, COT_C_DESC |
+| 66 | COTABL_D | 198 | d | Estates | COT_D_CODE, COT_D_DESC |
+| 67 | COTABL_M | 198 | m | Contract Status | COT_M_CODE, COT_M_DESC |
+| 68 | IVCTBLU | 148 | U | Contacts Multi Addresses | IVTU_CUSTNO, IVTU_SEQNUM, IVTU_SURNAME |
+| 69 | IVCTBLP | 148 | P | Word Processing Document Types | IVWP_MODULE, IVWP_CODE, IVWP_DESCR |
+| 70 | JOBTBLA | 247 | A | Cost Centre Table | CC_CODE, CC_DESC |
+| 71 | CNTXRFA | 096 | A | Contact Cross Reference | CXRF_SRC_CODE, CXRF_SEQ |
 
 ## Next Steps
 
@@ -205,5 +237,6 @@ This section provides a comprehensive overview of all BusinessCraft database tab
 3. **[Inventory](/database-schema/inventory)** - Inventory management tables
 4. **[Customers](/database-schema/customers)** - Customer management tables
 5. **[Purchase Orders](/database-schema/purchase-orders)** - Procurement tables
-6. **[Vendors](/database-schema/vendors)** - Vendor management tables
-7. **[Lookup Tables](/database-schema/lookup-tables)** - Reference data tables
+6. **[Request for Quote](/database-schema/request-for-quote)** - RFQ and quote management tables
+7. **[Vendors](/database-schema/vendors)** - Vendor management tables
+8. **[Lookup Tables](/database-schema/lookup-tables)** - Reference data tables

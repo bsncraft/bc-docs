@@ -36,6 +36,87 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <div className="container">
+          {/* BuiltGrid Integration - Request for Quote Module */}
+          <div className="row" style={{marginBottom: '3rem'}}>
+            <div className="col col--12">
+              <div style={{
+                backgroundColor: 'var(--ifm-color-primary)',
+                color: 'white',
+                padding: '2rem',
+                borderRadius: '12px',
+                border: '3px solid var(--ifm-color-primary-dark)',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                textAlign: 'center',
+                marginBottom: '2rem'
+              }}>
+                <h2 style={{color: 'white', marginBottom: '1rem', fontSize: '2rem'}}>
+                  🚀 BuiltGrid Integration - Request for Quote Module
+                </h2>
+                <p style={{fontSize: '1.2rem', marginBottom: '1.5rem', opacity: '0.95'}}>
+                  New RFQ module designed specifically for BuiltGrid supply chain integration
+                </p>
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: '1rem',
+                  flexWrap: 'wrap',
+                  marginBottom: '1.5rem'
+                }}>
+                  <div style={{
+                    backgroundColor: 'rgba(255,255,255,0.2)',
+                    padding: '0.8rem 1.5rem',
+                    borderRadius: '6px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold'
+                  }}>
+                    📋 14 Database Tables
+                  </div>
+                  <div style={{
+                    backgroundColor: 'rgba(255,255,255,0.2)',
+                    padding: '0.8rem 1.5rem',
+                    borderRadius: '6px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold'
+                  }}>
+                    🔗 BuiltGrid Ready
+                  </div>
+                  <div style={{
+                    backgroundColor: 'rgba(255,255,255,0.2)',
+                    padding: '0.8rem 1.5rem',
+                    borderRadius: '6px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold'
+                  }}>
+                    📊 Multi-Supplier RFQ
+                  </div>
+                </div>
+                <div style={{display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap'}}>
+                  <Link
+                    className="button button--secondary button--lg"
+                    to="/database-schema/request-for-quote"
+                    style={{
+                      backgroundColor: 'white',
+                      color: 'var(--ifm-color-primary)',
+                      border: 'none',
+                      fontWeight: 'bold'
+                    }}>
+                    View RFQ Documentation
+                  </Link>
+                  <Link
+                    className="button button--outline button--lg"
+                    to="/database-schema/request-for-quote#integration-notes"
+                    style={{
+                      color: 'white',
+                      borderColor: 'white',
+                      fontWeight: 'bold'
+                    }}>
+                    Integration Guide
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="row">
             <div className="col col--12">
               <h2>Business Process Flow</h2>
@@ -230,6 +311,79 @@ export default function Home(): JSX.Element {
                       Purchase order headers, lines, vendor master and contact information
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* RFQ Integration Point */}
+          <div className="row" style={{marginTop: '2rem'}}>
+            <div className="col col--12">
+              <div style={{
+                backgroundColor: 'var(--ifm-color-emphasis-100)',
+                border: '2px solid var(--ifm-color-primary)',
+                borderRadius: '8px',
+                padding: '1.5rem',
+                marginBottom: '2rem'
+              }}>
+                <h3 style={{color: 'var(--ifm-color-primary)', marginBottom: '1rem'}}>
+                  🔄 Request for Quote Integration Point
+                </h3>
+                <p style={{marginBottom: '1rem', fontSize: '1.1rem'}}>
+                  The new <strong>Request for Quote module</strong> integrates into the existing BusinessCraft workflow
+                  between steps 4-7, providing enhanced supplier management and quote comparison capabilities for BuiltGrid integration.
+                </p>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center'
+                }}>
+                  <div style={{
+                    backgroundColor: 'var(--ifm-color-primary)',
+                    color: 'white',
+                    padding: '1rem 1.5rem',
+                    borderRadius: '6px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold'
+                  }}>
+                    📋 RFQ Creation
+                  </div>
+                  <div style={{fontSize: '1.5rem', color: 'var(--ifm-color-primary)'}}>→</div>
+                  <div style={{
+                    backgroundColor: 'var(--ifm-color-primary)',
+                    color: 'white',
+                    padding: '1rem 1.5rem',
+                    borderRadius: '6px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold'
+                  }}>
+                    📊 Quote Comparison
+                  </div>
+                  <div style={{fontSize: '1.5rem', color: 'var(--ifm-color-primary)'}}>→</div>
+                  <div style={{
+                    backgroundColor: 'var(--ifm-color-primary)',
+                    color: 'white',
+                    padding: '1rem 1.5rem',
+                    borderRadius: '6px',
+                    fontSize: '0.9rem',
+                    fontWeight: 'bold'
+                  }}>
+                    🎯 Supplier Selection
+                  </div>
+                </div>
+                <div style={{textAlign: 'center', marginTop: '1rem'}}>
+                  <Link
+                    to="/database-schema/request-for-quote"
+                    style={{
+                      color: 'var(--ifm-color-primary)',
+                      textDecoration: 'none',
+                      fontWeight: 'bold',
+                      fontSize: '1.1rem'
+                    }}>
+                    Learn more about the RFQ module →
+                  </Link>
                 </div>
               </div>
             </div>

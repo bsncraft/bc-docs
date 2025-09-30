@@ -8,6 +8,7 @@ const sidebars: SidebarsConfig = {
     'database-schema/inventory',
     'database-schema/customers',
     'database-schema/purchase-orders',
+    'database-schema/request-for-quote',
     'database-schema/vendors',
     'database-schema/lookup-tables',
   ],
