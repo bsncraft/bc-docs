@@ -32,7 +32,7 @@
   --ifm-color-primary-light: #e77015;
   --ifm-color-primary-lighter: #f28c2c;
   --ifm-color-primary-lightest: #f6a439;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);  
 }
 
 .fa-primary {
@@ -67,7 +67,7 @@
   background-size: cover;
 }
 
-.footer__links,
+.footer__links, 
 .footer__bottom {
   position: relative;
 }
@@ -112,19 +112,4 @@ ul ul .table-of-contents__link {
   border-left-color: var(--ifm-menu-color-active);
   color: var(--ifm-menu-color-active);
   font-weight: var(--ifm-font-weight-semibold);
-}
-
-/* Improve scroll behavior for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Ensure anchor links scroll properly */
-:target {
-  scroll-margin-top: 2rem;
-}
-
-/* Fix for anchor links not scrolling */
-a[href^="#"] {
-  scroll-behavior: smooth;
 }
